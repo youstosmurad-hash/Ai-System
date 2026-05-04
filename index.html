@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI System Diagnostics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CRT Effect Overlay -->
+    <div class="crt"></div>
+    <div class="scanlines"></div>
+
+    <!-- Main Interface -->
+    <div class="dashboard">
+        
+        <!-- Left Side Panels -->
+        <aside class="sidebar left-panel">
+            <div class="panel widget glitch-panel">
+                <h2>حالة المود (SYSTEM STATUS)</h2>
+                <div class="stat">
+                    <span>مجهود المعالج في الرقص 🕺</span>
+                    <div class="bar-bg"><div class="bar-fill" id="cpu-bar"></div></div>
+                    <span class="value" id="cpu-val">42%</span>
+                </div>
+                <div class="stat">
+                    <span>الرامات المنسحلة مع الأغنية 🎵</span>
+                    <div class="bar-bg"><div class="bar-fill" id="ram-bar"></div></div>
+                    <span class="value" id="ram-val">16GB / 64GB</span>
+                </div>
+                <div class="stat">
+                    <span>حرارة كارت الشاشة من الطرب 🔥</span>
+                    <div class="bar-bg"><div class="bar-fill" id="gpu-bar"></div></div>
+                    <span class="value" id="gpu-val">65°C</span>
+                </div>
+            </div>
+
+            <div class="panel widget">
+                <h2>سجل الفضايح 🤣</h2>
+                <div class="terminal-mini" id="network-log">
+                    <p>> بيسخن عشان يغني...</p>
+                    <p>> المايك شغال يا باشا.</p>
+                </div>
+            </div>
+            
+            <div class="panel ai-diagnostics">
+                 <h2>دماغ الذكاء الاصطناعي 🧠</h2>
+                 <div class="core-status">
+                     <div class="pulsing-circle"></div>
+                     <span id="ai-status-text">رايق 🎧</span>
+                 </div>
+                 <div class="matrix-rain-container">
+                     <canvas id="matrix-rain"></canvas>
+                 </div>
+            </div>
+        </aside>
+
+        <!-- Center Main Terminal -->
+        <main class="center-panel">
+            <div class="terminal-header">
+                <span class="title">ROOT@MOOD_AI: ~/music_logs 🎧</span>
+                <span class="controls"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+            </div>
+            <div class="click-instruction" style="text-align: center; color: yellow; background: rgba(30, 30, 0, 0.8); padding: 8px; font-size: 14px; animation: blink 1s step-end infinite; cursor: pointer; border-bottom: 1px solid var(--matrix-green-dim); font-weight: bold;">
+                👉 اضغط كليك في أي مكان لعرض الرسالة القادمة 👈
+            </div>
+            <div class="terminal-window" id="main-terminal">
+                <div id="output"></div>
+                <div class="input-line">
+                    <span class="prompt">root@system:~$ </span>
+                    <span class="cursor">_</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Side Panels -->
+        <aside class="sidebar right-panel">
+            <div class="panel widget">
+                <h2>العمليات الحالية 😂</h2>
+                <ul class="process-list" id="process-list">
+                    <li>PID 001 - haz_el_ras.exe</li>
+                    <li>PID 094 - taqteea_network.sh</li>
+                    <li>PID 102 - ai_beyghany_core</li>
+                </ul>
+            </div>
+            
+            <div class="panel widget warning-box hidden" id="error-popup">
+                <h2 class="alert-title">⚠ CRITICAL ALERT</h2>
+                <p id="error-text">UNAUTHORIZED ACCESS DETECTED</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Final Redirect Overlay -->
+    <div id="final-warning" class="hidden">
+        <div class="album-container">
+            <h2 id="countdown-text">جاري الدخول على الألبوم في <span id="countdown-number">5</span>...</h2>
+            <div class="album-art">
+                <div class="vinyl"></div>
+                <div class="cover">
+                    <h3>قال بحبك 🎧</h3>
+                    <p>SYSTEM OVERRIDE</p>
+                </div>
+            </div>
+            <a href="https://youtu.be/ef8PrGKW81c?si=Ch_Zc-Ly1_mKLPKP" id="album-link" class="cyber-btn">تشغيل الآن</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
